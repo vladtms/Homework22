@@ -16,10 +16,8 @@ class ViewController: UIViewController {
         service.getAccountList { result in
             switch result {
             case let .success(accountList):
-                // TODO: Show accounts in table view
                 print(accountList)
             case let .failure(error):
-                // TODO: Show error
                 print(error)
             }
         }
