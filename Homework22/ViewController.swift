@@ -25,18 +25,18 @@ class ViewController: UIViewController {
         }
         
 
-//        guard let path = Bundle.main.path(forResource: "accountList", ofType: "json"),
-//              let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe) else {
-//                  return
-//              }
-//
-//        do {
-//            let list = try JSONDecoder().decode([Account].self, from: data)
-//            print(list)
-//        } catch {
-//            print(error)
-//        }
-//
+        guard let path = Bundle.main.path(forResource: "accountList", ofType: "json"),
+              let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe) else {
+                  return
+              }
+
+        do {
+            let list = try JSONDecoder().decode([Account].self, from: data)
+            print(list)
+        } catch {
+            print(error)
+        }
+
     }
 
 
