@@ -13,16 +13,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        service.getAccountList { result in
-            switch result {
-            case let .success(accountList):
-                print(accountList)
-            case let .failure(error):
-                print(error)
-            }
-        }
-        
-
         guard let path = Bundle.main.path(forResource: "accountList", ofType: "json"),
               let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe) else {
                   return
